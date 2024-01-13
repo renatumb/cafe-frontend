@@ -16,6 +16,7 @@ import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import {NgxUiLoaderConfig, NgxUiLoaderModule} from 'ngx-ui-loader';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   bgsColor: '#6600ff',
@@ -32,8 +33,8 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   fgsType: 'cube-grid',
   gap: 78,
   logoPosition: 'center-center',
-  logoSize: 180,
-  logoUrl: 'assets/angular.png',
+  logoSize: 100,
+  logoUrl: '../assets/logo.png',
   masterLoaderId: 'master',
   overlayBorderRadius: '0',
   overlayColor: 'rgba(197,185,185,0.8)',
@@ -56,7 +57,8 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     FullComponent,
     AppHeaderComponent,
     AppSidebarComponent,
-    SignupComponent
+    SignupComponent,
+    ForgotPasswordComponent
    ],
   imports: [
     BrowserModule,
