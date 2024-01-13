@@ -13,15 +13,50 @@ import { SharedModule } from './shared/shared.module';
 import { FullComponent } from './layouts/full/full.component';
 import { AppHeaderComponent } from './layouts/full/header/header.component';
 import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
+import {HttpClientModule} from '@angular/common/http';
+import { SignupComponent } from './signup/signup.component';
+import {NgxUiLoaderConfig, NgxUiLoaderModule} from 'ngx-ui-loader';
+
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  bgsColor: '#6600ff',
+  bgsOpacity: 1,
+  bgsPosition: 'top-center',
+  bgsSize: 140,
+  bgsType: 'chasing-dots',
+  blur: 0,
+  delay: 0,
+  fastFadeOut: true,
+  fgsColor: '#6600ff',
+  fgsPosition: 'center-center',
+  fgsSize: 40,
+  fgsType: 'cube-grid',
+  gap: 78,
+  logoPosition: 'center-center',
+  logoSize: 180,
+  logoUrl: 'assets/angular.png',
+  masterLoaderId: 'master',
+  overlayBorderRadius: '0',
+  overlayColor: 'rgba(197,185,185,0.8)',
+  pbColor: '#6600ff',
+  pbDirection: 'ltr',
+  pbThickness: 10,
+  hasProgressBar: true,
+  text: 'Loading ....',
+  textColor: '#6600ff',
+  textPosition: 'center-center',
+  maxTime: -1,
+  minTime: 300
+};
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     HomeComponent,
     BestSellerComponent,
     FullComponent,
     AppHeaderComponent,
-    AppSidebarComponent
+    AppSidebarComponent,
+    SignupComponent
    ],
   imports: [
     BrowserModule,
@@ -31,7 +66,9 @@ import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
     ReactiveFormsModule,
     MaterialModule,
     FlexLayoutModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

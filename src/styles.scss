@@ -8,16 +8,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     .responsive_table {
         overflow-x: auto !important;
     }
-  
+
     .mat-table {
         min-width:800px;
     }
   }
-  
+
   .mat-row {
     height: auto;
   }
-  
+
   .mat-header-cell,.mat-cell {
     text-align: center !important;
     padding: 0px 8px 0px 15px !important;
@@ -27,6 +27,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background: black !important;
     color: white !important;
   }
+
+.red-snackbar {
+  background: darkred !important;
+  color: white !important;
+}
 
   .green-snackbar {
     background: #00ff7f !important;
