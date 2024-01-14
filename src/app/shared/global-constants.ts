@@ -1,5 +1,5 @@
 export class GlobalConstants {
-  public static genericError = 'Something went wrong, please try again later';
+  public static genericError = 'Something went wrong, please try again later - FRONT';
 
   public static nameRegex = '[a-zA-Z0-9 ]*';
 
