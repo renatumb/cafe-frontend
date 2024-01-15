@@ -40,4 +40,11 @@ export class UserService {
   public checkToken(): Observable<any> {
     return this.httpClient.get(this.url + '/user/checkToken');
   }
+  public changePassword(data: any): Observable<any> {
+    return this.httpClient.post(
+      this.url + '/user/changePassword',
+      data,
+      {headers: new HttpHeaders().set('Content-Type', 'application/json')}
+    );
+  }
 }
