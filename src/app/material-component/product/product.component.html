@@ -1,0 +1,71 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayout="row">
+    <span>{{ this.dialogData.action }} product</span>
+    <span class="spacer"></span>
+    <button mat-icon-button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="this.productForm">
+    <div fxFlex fxLayout="column">
+
+      <div fxLayout="row wrap">
+        <mat-form-field appearance="fill" fxFlex>
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name">
+          <mat-error *ngIf="this.productForm.controls?.name?.touched && this.productForm.controls?.name?.invalid">
+            <span *ngIf="this.productForm.controls?.name?.errors?.required">This field is mandatory</span>
+            <span *ngIf="this.productForm.controls?.name?.errors?.pattern">This field is invalid</span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row wrap">
+        <mat-form-field appearance="fill" fxFlex>
+          <mat-label>Price</mat-label>
+          <input matInput formControlName="price">
+          <mat-error *ngIf="this.productForm.controls?.price?.touched && this.productForm.controls?.price?.invalid">
+            <span *ngIf="this.productForm.controls?.price?.errors?.required">This field is mandatory</span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row wrap">
+        <mat-form-field appearance="fill" fxFlex>
+          <mat-label>Category</mat-label>
+          <mat-select formControlName="categoryId">
+            <mat-option *ngFor="let cat of this.categories" [value]="cat.id">
+              {{ cat.id }} | {{ cat.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row wrap">
+        <mat-form-field appearance="fill" fxFlex>
+          <mat-label>Description</mat-label>
+          <input matInput formControlName="description">
+          <mat-error *ngIf="this.productForm.controls?.description?.touched && this.productForm.controls?.description?.invalid">
+            <span *ngIf="this.productForm.controls?.description?.errors?.required">This field is mandatory</span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" [disabled]="!( this.productForm.valid && this.productForm.dirty)"
+          (click)="this.handleSubmit()">
+    <mat-icon>save</mat-icon>
+    {{ this.dialogData.action }}
+  </button>
+  <button mat-raised-button mat-dialog-close color="warn">
+    <mat-icon>cancel</mat-icon>
+    Close
+  </button>
+</mat-dialog-actions>
