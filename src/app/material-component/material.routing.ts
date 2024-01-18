@@ -3,6 +3,7 @@ import {DashboardComponent} from '../dashboard/dashboard.component';
 import {ManageCategoryComponent} from './manage-category/manage-category.component';
 import {RouteGuardService} from '../services/route-guard.service';
 import {ManageProductComponent} from './manage-product/manage-product.component';
+import {ManageOrderComponent} from './manage-order/manage-order.component';
 
 
 export const MaterialRoutes: Routes = [
@@ -21,5 +22,14 @@ export const MaterialRoutes: Routes = [
       expectedRole: ['admin']
     },
     canActivate: [RouteGuardService]
-  }//
+  },
+  {
+    path: 'order',
+    component: ManageOrderComponent,
+    data: {
+      expectedRole: ['admin', 'user']
+    },
+    canActivate: [RouteGuardService]
+  }
+
 ];

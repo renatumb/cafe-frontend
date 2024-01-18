@@ -27,6 +27,12 @@ export class CategoryService {
     );
   }
 
+  public getFilteredCategories(): Observable<any> {
+    return this.httpClient.get(
+      this.url + '/category/get?filter=true'
+    );
+  }
+
   public update(data: any): Observable<any> {
     return this.httpClient.post(
       this.url + '/category/update',
