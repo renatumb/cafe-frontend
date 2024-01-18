@@ -1,0 +1,24 @@
+.float-right {
+  float: right;
+}
+
+mat-card {
+  padding: 20px;
+}
+
+mat-form-field {
+  margin: 3px;
+}
+
+table {
+  width: 100%;
+}
+
+::ng-deep .highlight {
+  color: white;
+  background: #673ab7;
+}
+
+mat-error:first-child {
+  display: block !important;
+}

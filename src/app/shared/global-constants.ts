@@ -10,4 +10,8 @@ export class GlobalConstants {
   public static contactNumberRegex = '^[e0-9]{10,10}$';
 
   public static error = 'error';
+
+  public static productExistError = 'Product Already Exist';
+
+  public static productAdded = 'Product Added Sucessfully;';
 }
