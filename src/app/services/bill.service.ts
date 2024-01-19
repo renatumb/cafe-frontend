@@ -41,7 +41,7 @@ export class BillService {
 
   public deleteBill(id: string): Observable<any> {
     return this.httpClient.get(
-      this.api + '/' + id,
+      this.api + '/bill/delete/' + id,
       {headers: new HttpHeaders().set('Content-type', 'application/json')}
     );
   }

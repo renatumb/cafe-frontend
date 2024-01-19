@@ -1,0 +1,65 @@
+<mat-card>
+  <b><span>View Bill</span></b>
+</mat-card>
+<hr>
+<mat-card>
+  <mat-form-field appearance="fill">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)">
+  </mat-form-field>
+</mat-card>
+<hr>
+<div class="responsive_table">
+  <table mat-table [dataSource]="this.dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id#</th>
+      <td mat-cell *matCellDef="let ele">{{ ele.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let ele">{{ ele.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let ele">{{ ele.email }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="contactNumber">
+      <th mat-header-cell *matHeaderCellDef>Contact Number</th>
+      <td mat-cell *matCellDef="let ele">{{ ele.contactNumber }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="paymentMethod">
+      <th mat-header-cell *matHeaderCellDef>Payment Method</th>
+      <td mat-cell *matCellDef="let ele">{{ ele.paymentMethod }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="total">
+      <th mat-header-cell *matHeaderCellDef>Total</th>
+      <td mat-cell *matCellDef="let ele">{{ ele.totalAmount }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let ele" class>
+        <button mat-icon-button color="primary" (click)="handleViewAction(ele)">
+          <mat-icon>visibility</mat-icon>
+        </button>
+
+        <button mat-icon-button color="primary" (click)="handleDownloadAction(ele)">
+          <mat-icon>download</mat-icon>
+        </button>
+
+        <button mat-icon-button color="primary" (click)="handleDeleteAction(ele)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="this.displayedColumns;sticky:true"></tr>
+    <tr mat-row *matRowDef="let row; columns:this.displayedColumns">
+  </table>
+</div>
