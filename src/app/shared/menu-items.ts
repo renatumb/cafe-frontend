@@ -14,6 +14,9 @@ const MENU_ITEMS = [
   {state: 'product', name: 'Manage Product', type: 'link', icon: 'inventory', role: 'admin'},
   {state: 'order', name: 'Manage Order', type: 'link', icon: 'shopping_cart', role: ''},
   {state: 'bill', name: 'Bills', type: 'link', icon: 'receipt_long', role: ''}
+  ,{state: 'user', name: 'Manage Users', type: 'link', icon: 'manage_accounts', role: 'admin'}
+
+
 ];
 
 @Injectable({
