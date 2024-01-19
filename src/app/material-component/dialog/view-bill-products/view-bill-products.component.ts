@@ -1,4 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import {Component, OnInit, Inject} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-view-bill-products',
@@ -7,8 +8,16 @@ import { Component, OnInit, Inject } from '@angular/core';
 })
 export class ViewBillProductsComponent implements OnInit {
 
-  constructor() { }
+  public displayedProductColumns: string[] = ['name', 'category', 'price', 'quantity', 'total'];
+  public dataSourceProduct: any;
 
-  ngOnInit() {
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public dialogData: any,
+    public dialogRef: MatDialogRef<ViewBillProductsComponent>
+  ) {
+  }
+
+  ngOnInit(): void {
+    this.dataSourceProduct = JSON.parse(this.dialogData.data.productDetails);
   }
 }
