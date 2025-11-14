@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://127.0.0.1:8082'
+  //apiUrl: 'https://cafe.renatobonfim.com/api'
+  apiUrl: 'http://localhost:8090/api'
 };

@@ -25,3 +25,39 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+# Versions
+
+```text
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+
+Angular CLI: 11.2.14
+Node: 10.13.0
+OS: win32 x64
+
+Angular: 11.2.14
+... animations, cli, common, compiler, compiler-cli, core, forms
+... platform-browser, platform-browser-dynamic, router
+Ivy Workspace: Yes
+
+Package                         Version
+---------------------------------------------------------
+@angular-devkit/architect       0.1102.14
+@angular-devkit/build-angular   0.1102.14
+@angular-devkit/core            11.2.14
+@angular-devkit/schematics      11.2.14
+@angular/cdk                    11.2.13
+@angular/flex-layout            12.0.0-beta.35
+@angular/material               11.2.13
+@schematics/angular             11.2.14
+@schematics/update              0.1102.14
+rxjs                            6.6.7
+typescript                      4.1.6
+```
